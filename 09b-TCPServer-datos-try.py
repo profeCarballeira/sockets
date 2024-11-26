@@ -13,8 +13,8 @@ try:
             while True:
                 data = conn.recv(1024) #linea bloqueante
                 print (data)
-                if data==b"0":
+                if data==b"0":                    
                     break
-                conn.sendall(b"mensaje recibido")
+                conn.sendall(b"mensaje recibido")            
 except socket.error as e:
     print ("Error en socker: %s" %e)
